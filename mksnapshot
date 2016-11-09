@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -ex
+
+../electron/vendor/brightray/vendor/download/libchromiumcontent/shared_library/mksnapshot \
+  ./out/snapshot.js \
+  --startup_blob out/snapshot_blob.bin
+
+cp out/snapshot_blob.bin \
+  "../electron/out/D/Electron.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources"

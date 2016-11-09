@@ -1,0 +1,20 @@
+{
+  "name": "mksnapshot-test",
+  "main": "main.js",
+  "scripts": {
+    "build": "browserify snapshot/snapshot.js -o out/snapshot.js && ./mksnapshot",
+    "start": "../electron/out/D/Electron.app/Contents/MacOS/Electron",
+    "snapshot": "npm run start -- snapshot/main.js",
+    "no-snapshot": "npm run start -- no-snapshot/main.js"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1"
+  },
+  "dependencies": {
+    "d3": "^4.3.0",
+    "moment": "^2.15.2",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "redux": "^3.6.0"
+  }
+}
