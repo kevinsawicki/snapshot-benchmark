@@ -31,6 +31,7 @@ exports.start = (url) => {
         app.exit(1)
       })
     })
+
     window.loadURL(url)
   })
 }

@@ -4,6 +4,7 @@
   "scripts": {
     "build": "browserify snapshot/snapshot.js -o out/snapshot.js && ./mksnapshot",
     "start": "../electron/out/D/Electron.app/Contents/MacOS/Electron",
+    "empty": "npm run start -- empty/main.js",
     "snapshot": "npm run start -- snapshot/main.js",
     "no-snapshot": "npm run start -- no-snapshot/main.js"
   },

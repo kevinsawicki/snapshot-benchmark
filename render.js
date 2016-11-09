@@ -1,10 +1,10 @@
-class Versions extends React.Component {
-  render() {
-    return React.createElement('div', null, `React v${this.props.reactVersion}, moment v${this.props.momentVersion}, d3 v${this.props.d3Version}`);
-  }
-}
-
 exports.render = (Redux, d3, moment, React, ReactDOM) => {
+  class Versions extends React.Component {
+    render() {
+      return React.createElement('div', null, `React v${this.props.reactVersion}, moment v${this.props.momentVersion}, d3 v${this.props.d3Version}`);
+    }
+  }
+
   const store = Redux.createStore((state, action) => {
     if (state == null) {
       return {
