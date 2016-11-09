@@ -2,17 +2,17 @@
   "name": "mksnapshot-test",
   "main": "main.js",
   "scripts": {
-    "build": "browserify snapshot/snapshot.js -o out/snapshot.js && ./mksnapshot",
-    "start": "../electron/out/D/Electron.app/Contents/MacOS/Electron",
-    "empty": "npm run start -- empty/main.js",
-    "snapshot": "npm run start -- snapshot/main.js",
-    "no-snapshot": "npm run start -- no-snapshot/main.js"
+    "build": "browserify snapshot/snapshot.js -o out/snapshot.js && ./snapshot/create.sh",
+    "empty": "electron empty/main.js",
+    "snapshot": "./node_modules/electron-with-snapshot/cli.js snapshot/main.js",
+    "no-snapshot": "electron no-snapshot/main.js"
   },
   "devDependencies": {
     "browserify": "^13.1.1"
   },
   "dependencies": {
     "d3": "^4.3.0",
+    "electron": "1.4.5",
     "moment": "^2.15.2",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

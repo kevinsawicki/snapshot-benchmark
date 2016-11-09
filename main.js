@@ -19,16 +19,13 @@ exports.start = (url) => {
       console.log(`dom-ready fired in ${Date.now() - startTime}ms`)
 
       // Verify page had content
-      window.webContents.executeJavaScript('document.body.textContent', true).then((content) => {
+      window.webContents.executeJavaScript('document.body.textContent', true, (content) => {
         if (content.trim() === 'React v15.3.2, moment v2.15.2, d3 v4.3.0') {
           app.exit()
         } else {
           console.error('Page was different', content.trim())
           app.exit(1)
         }
-      }).catch((error) => {
-        console.error('Failed checking page', error.message)
-        app.exit(1)
       })
     })
 
