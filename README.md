@@ -8,8 +8,8 @@ It benchmarks an app with no JS, against an app with 1.3MB of library code
 compiled into a v8 snapshot, against an app that loads the same 1.3MB of library
 code via `require` at startup.
 
-It measures the time take from `BrowserWindow.loadURL` being called to the
-`dom-ready` event being fired on the page.
+It measures the time taken from `BrowserWindow.loadURL` being called to the
+`dom-ready` event being fired on the loaded page.
 
 ## Running
 
