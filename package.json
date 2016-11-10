@@ -5,7 +5,8 @@
     "build": "browserify snapshot/snapshot.js -o out/snapshot.js && ./snapshot/create.sh",
     "empty": "electron empty/main.js",
     "snapshot": "./node_modules/electron-with-snapshot/cli.js snapshot/main.js",
-    "no-snapshot": "electron no-snapshot/main.js"
+    "no-snapshot": "electron no-snapshot/main.js",
+    "benchmark": "npm run build && node ./benchmark.js"
   },
   "devDependencies": {
     "browserify": "^13.1.1"
