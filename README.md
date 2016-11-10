@@ -23,10 +23,10 @@ It measures the time taken from `BrowserWindow.loadURL` being called to the
 
 ## Results
 
-Average load time for 10 app launches.
+Average time to DOM ready for 10 app launches.
 
-| Type            | Time   |
-| :-------------- | :----- |
-| Empty app       | 225ms  |
-| With snapshot   | 241ms  |
-|Without snapshot | 448ms  |
+| Type             | Time   |
+| :--------------  | :----- |
+| Empty app        | 994ms  |
+| With snapshot    | 1014ms |
+| Without snapshot | 1208ms |

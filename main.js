@@ -14,9 +14,8 @@ exports.start = (url) => {
       show: false
     })
 
-    const startTime = Date.now()
     window.webContents.once('dom-ready', () => {
-      console.log(Date.now() - startTime)
+      console.log(Date.now())
 
       // Verify page had content
       window.webContents.executeJavaScript('document.body.textContent', true, (content) => {
