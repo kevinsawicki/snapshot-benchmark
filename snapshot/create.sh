@@ -3,7 +3,7 @@
 set -ex
 
 # Create the snapshot
-./mksnapshot ./out/snapshot.js --startup_blob ./out/snapshot_blob.bin
+./node_modules/.bin/mksnapshot ./out/snapshot.js --startup_blob ./out/snapshot_blob.bin
 
 # Copy Electron to run with custom snapshot
 rm -fr ./node_modules/electron-with-snapshot
